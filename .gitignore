@@ -1,0 +1,6 @@
+# Private information
+src/js/constants.js
+
+# "Large" (not really) files
+src/assets/libs/leaflet
+src/assets/fonts/brandon-grotesque/*.woff

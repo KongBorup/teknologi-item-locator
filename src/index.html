@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVAD SKAL NAVNET VÆRE????????</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Library imports -->
+    <link rel="stylesheet" href="assets/libs/leaflet/leaflet.css" />
+    <script src="assets/libs/leaflet/leaflet.js"></script>
+    <!-- Font imports -->
+    <link rel="stylesheet" href="assets/fonts/brandon-grotesque/fonts.css">
+</head>
+<body>
+    <div class="content">
+        <div id="map" class="map"></div>
+        <div class="information">
+            <h1 class="header main-header">Information</h1>
+            <h2 class="header sub-header">Koordinater</h2>
+            <p>
+                Breddegrad: <span id="lat"></span>
+                <br />
+                Længdegrad: <span id="long"></span>
+            </p>
+            <h2 class="header sub-header">Adresse</h2>
+            <p id="address"></p>
+        </div>
+    </div>
+
+    <script src="js/constants.js"></script>
+    <script src="js/Coordinate.js"></script>
+    <script src="js/LeafletMap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

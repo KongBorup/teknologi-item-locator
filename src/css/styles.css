@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content {
+    background-color: #282C5D;
+    font-family: 'Brandon Grotesque';
+    color: #8587BD;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+.information {
+    width: 20rem;
+    height: 93vh;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    background-color: #333666;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.35);
+    /* Dont question z-index. Just leave it otherwise it will break */
+    z-index: 10000000000000000;
+}
+
+.information .main-header {
+    font-size: 1.3rem;
+}
+
+.information .sub-header {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.header {
+    font-family: 'Brandon Grotesque';
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: #a0a1ce;
+}
+
+.leaflet-control-attribution {
+    display: none;
+}
