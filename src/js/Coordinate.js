@@ -16,6 +16,36 @@ class Coordinate {
     this.long = long;
   }
 
+  static fromDecimals(lat, long) {
+    const { abs, floor } = Math;
+
+    const latDir = lat < 0 ? 'S' : 'N';
+    const longDir = long < 0 ? 'W' : 'E';
+
+    const latDegs = floor(abs(lat));
+    const latMins = floor((abs(lat) - latDegs) * 60);
+    const latSecs = (abs(lat) - (latDegs + latMins / 60)) * 3600;
+
+    const longDegs = floor(abs(long));
+    const longMins = floor((abs(long) - longDegs) * 60);
+    const longSecs = (abs(long) - (longDegs + longMins / 60)) * 3600;
+
+    return new Coordinate({
+      lat: {
+        degs: latDegs,
+        mins: latMins,
+        secs: latSecs,
+        dir: latDir,
+      },
+      long: {
+        degs: longDegs,
+        mins: longMins,
+        secs: longSecs,
+        dir: longDir,
+      },
+    });
+  }
+
   coordMap(callback) {
     return [this.lat, this.long].map(callback);
   }

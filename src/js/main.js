@@ -1,18 +1,29 @@
+async function getCoordinates() {
+  const url = 'http://192.168.137.128';
+  const res = await fetch(url);
+  const coords = await res.json();
+
+  return coords;
+}
+
 (async () => {
-  const coord = new Coordinate({
-    lat: {
-      degs: 39,
-      mins: 6,
-      secs: 59,
-      dir: 'N',
-    },
-    long: {
-      degs: 125,
-      mins: 48,
-      secs: 21,
-      dir: 'E',
-    },
-  });
+  // const coord = new Coordinate({
+  //   lat: {
+  //     degs: 39,
+  //     mins: 6,
+  //     secs: 59,
+  //     dir: 'N',
+  //   },
+  //   long: {
+  //     degs: 125,
+  //     mins: 48,
+  //     secs: 21,
+  //     dir: 'E',
+  //   },
+  // });
+
+  const ree = await getCoordinates();
+  const coord = Coordinate.fromDecimals(ree.lat, ree.long);
   
   const [latStr, longStr] = coord.toDisplayStrings();
   document.getElementById('lat').textContent = latStr;
