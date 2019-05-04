@@ -49,6 +49,19 @@ plugged into your webserver and that the MAC and IP-addresses match.
 Edit the `src/js/main.js` file to send a request to the correct IP-address, and 
 then open the `index.html` file. You should see the location of your GPS module.
 
+## Arduino schematics
+### GPS tracker, radio
+![](arduino/schematics/gps-tracker-radio.png)
+
+### GPS tracker, Bluetooth
+![](arduino/schematics/gps-tracker-bluetooth.png)
+
+### Web server, radio
+![](arduino/schematics/webserver-radio.png)
+
+### Web server, Bluetooth
+![](arduino/schematics/webserver-bluetooth.png)
+
 [Mapbox's website]: https://www.mapbox.com
 [LocationIQ's website]: https://locationiq.com
 [Leaflet.js' download page]: https://leafletjs.com/download.html
